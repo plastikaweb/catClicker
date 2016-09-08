@@ -2,29 +2,42 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>cat clicker</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>cat clicker</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div id="catsList">
-           <h1>List of cats:</h1>
-           <ul></ul>
+    <div id="catsList">
+        <h1>List of cats:</h1>
+        <ul></ul>
+        <button class="showHideAdmin">Admin</button>
+        <div id="admin" class="hide">
+            <label for="nameField">Name: <input id="nameField" name="nameField" type="text"></label>
+            <label for="picField">Picture: <input id="picField" name="picField" type="text"></label>
+            <label for="clicksField">#Clicks: <input id="clicksField" name="clicksField" type="number"></label>
+            <button class="showHideAdmin">Cancel</button>
+            <button id="saveAdmin">Save</button>
         </div>
-        <h2>Number of clicks: <span id="clicks"></span></h2>
-        <div id="catView">
-        </div>
+    </div>
+    <h2>Number of clicks: <span id="clicks"></span></h2>
+    <div id="catView">
+    </div>
 
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script src="script.js"></script> 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="script.js"></script>
 
-    </body>  
+</body>
+
 </html>

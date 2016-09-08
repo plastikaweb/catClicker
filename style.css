@@ -1,3 +1,8 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    background: #eeeeee;
+}
 #catsList {
     width: 200px;
     float:left;
@@ -7,4 +12,13 @@
 }
 ul {
     list-style-type: none;
+}
+li > img {
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    background: #cccccc;
+}
+.hide {
+    display: none;
 }
