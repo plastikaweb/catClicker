@@ -1,0 +1,10 @@
+#catsList {
+    width: 200px;
+    float:left;
+}
+#catView {
+    float: left;
+}
+ul {
+    list-style-type: none;
+}
