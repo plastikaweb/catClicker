@@ -28,17 +28,23 @@ $(function(){
         getCats: function() {
             return model.cats;
         },
-        changeCat: function(cat) {
+        getCurrentCat: function() {
+            return model.selectedCat;
+        },
+        setCurrentCat: function(cat) {
             model.selectedCat = cat;
-            catView.render(model.selectedCat);
+        },
+        changeCat: function(cat) {
+            this.setCurrentCat(cat);
+            catView.render(cat);
             this._updateClicksView();
         },
         countClicks: function() {
-            model.selectedCat.clicks++; 
+            this.getCurrentCat().clicks++; 
             this._updateClicksView();
         },
         _updateClicksView: function() {
-            catView.updateClicks(model.selectedCat.clicks);
+            catView.updateClicks(this.getCurrentCat().clicks);
         }
     };
 
@@ -87,7 +93,7 @@ $(function(){
             catDiv.html('').append([name, img]);
 
             img.on('click', function() {
-                octopus.countClicks(cat);
+                octopus.countClicks();
             });
         },
         updateClicks: function(clicks) {
