@@ -1,13 +1,28 @@
 var octopusAdmin = (function (controller) {
+    /**
+     * on laod action
+     */
     controller.init = function () {
         adminView.init();
     };
-    controller.getAdminState = function () {
+    /**
+     * admin area is shown or not
+     * @returns {boolean}
+     */
+    controller.getAdminVisibility = function () {
         return model.isAdminShown;
     };
-    controller.setAdminState = function (state) {
+    /**
+     * set visibility for admin area
+     * @param {boolean} state
+     */
+    controller.setAdminVisibility = function (state) {
         model.isAdminShown = state;
     };
+    /**
+     * update cat properties and updates view
+     * @param {object} data
+     */
     controller.changeDataCat = function (data) {
         var indexCat = $.inArray(model.selectedCat, model.cats);
         var updateList = data.pic !== model.selectedCat.pic ||

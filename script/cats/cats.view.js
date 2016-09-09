@@ -1,8 +1,16 @@
 var catsView = (function (view) {
+    /**
+     * on load action
+     */
     view.init = function () {
+        // cache selectors
         this.divList = $('#catsList > ul');
+        // shpw list of cats on view
         this.render();
     };
+    /**
+     * draw list of cats
+     */
     view.render = function () {
         var elements = [];
         this.divList.empty();

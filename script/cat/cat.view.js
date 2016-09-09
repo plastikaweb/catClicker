@@ -1,8 +1,16 @@
 var catView = (function (view) {
+    /**
+     * on load action
+     */
     view.init = function () {
+        // cache selectors
         this.catDiv = $('#catView');
         this.clicksEl = $('#clicks');
     };
+    /**
+     * renders single cat on view
+     * @param {Cat} cat
+     */
     view.render = function (cat) {
         var catDiv = this.catDiv,
             name = $('<h2>' + cat.name + '</h2>'),
@@ -16,6 +24,10 @@ var catView = (function (view) {
             octopusCat.countClicks();
         });
     };
+    /**
+     * updates #clicks on view
+     * @param {number} clicks
+     */
     view.updateClicks = function (clicks) {
         this.clicksEl.html(clicks);
     };
