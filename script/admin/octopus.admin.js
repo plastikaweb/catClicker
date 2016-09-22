@@ -1,4 +1,5 @@
 var octopusAdmin = (function (controller) {
+    'use strict';
     /**
      * on laod action
      */

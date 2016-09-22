@@ -1,5 +1,5 @@
 var adminView = (function (view) {
-
+    'use strict';
     /**
      * send new cat data to controller
      * @private

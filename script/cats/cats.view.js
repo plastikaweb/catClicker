@@ -1,4 +1,5 @@
 var catsView = (function (view) {
+    'use strict';
     /**
      * on load action
      */

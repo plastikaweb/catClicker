@@ -1,5 +1,5 @@
 var octopusCat = (function (controller) {
-
+    'use strict';
     /**
      * get current clicks for cat and updates cat view and #clicks field on admin view
      * @private

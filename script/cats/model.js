@@ -1,5 +1,5 @@
 var model = (function (model) {
-
+    'use strict';
     /**
      * Cat
      * @param {string} name

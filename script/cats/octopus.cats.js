@@ -1,4 +1,5 @@
 var octopusCats = (function (controller) {
+    'use strict';
     /**
      * on load action
      */
